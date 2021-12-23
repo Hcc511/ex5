@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .ProBar{
+            justify-items: center;
+            text-align: center;
+            width: 300px;
+            height: 80px;
+            margin-left: 40%;
+            margin-top: 10%;
+        }
+        .barDiv
+        {
+            width: 1000px;
+            height: 30px;
+        }
+        .bar
+        {
+            position: relative;
+            background-color: #DDDDDD;
+            width: 400px;
+            height: 50px;
+            top:17px;
+        }
+        #greenBar
+        {
+            width: 0%;
+            height: 50px;
+            background-color: #64BD2E;
+            transition: all 10s ease;
+            text-align: center;
+            animation: ;
+        }
+
+        #msg_div{
+            height: 80px;
+            text-align: center;
+        }
+        #box_div{
+            height: 50px;
+            text-align: center;
+        }
+        #img1{
+            animation: action 1s linear infinite;
+        }
+        @keyframes action {
+            25%{opacity: 0.5}
+            50%{opacity: 0.1}
+            75%{opacity: 0.5}
+            100%{opacity: 0.9}
+
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        var i = 1;
+        window.onload = function () {
+            while(i<100)
+            {
+                document.getElementById("greenBar").style.width=i+"%";
+                i=i+1;
+            }
+
+
+
+            setTimeout("javascript:location.href='main.html'",12000);
+        }
+    </script>
+
+</head>
+<body>
+
+
+<div class="ProBar">
+
+    <div class="barDiv">
+
+        <div class="bar">
+            <div id="greenBar" >
+                <img id = "img1" src="res/rw.png" width="50" height="50">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="msg_div">请稍后，正在加载中......</div>
+</body>
+</html>
